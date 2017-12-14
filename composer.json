@@ -1,0 +1,17 @@
+{
+    "name": "brutto/TextAtAnyCost",
+    "type": "library",
+    "description": "Get text from differect documents",    
+    "homepage": "https://github.com/rembish/TextAtAnyCost",
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload": {
+        "files": [
+            "zipped-xml.php"
+        ],
+        "classmap": [
+            "."
+        ]
+    }
+}
