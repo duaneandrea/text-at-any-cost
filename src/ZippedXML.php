@@ -22,7 +22,7 @@ class ZippedXML
 	public static function getTextFromZippedXML($archiveFile, $contentFile)
 	{
 		// Создаёт "реинкарнацию" zip-архива...
-		$zip = new ZipArchive;
+		$zip = new \ZipArchive;
 		// И пытаемся открыть переданный zip-файл
 		if ($zip->open($archiveFile)) {
 			// В случае успеха ищем в архиве файл с данными
@@ -34,7 +34,7 @@ class ZippedXML
 
 				// После этого подгружаем все entity и по возможности include'ы других файлов
 				// Проглатываем ошибки и предупреждения
-				$xml = new DOMDocument();
+				$xml = new \DOMDocument();
 				$xml->loadXML($content, LIBXML_NOENT | LIBXML_XINCLUDE | LIBXML_NOERROR | LIBXML_NOWARNING);
 				// После чего возвращаем данные без XML-тегов форматирования
 
