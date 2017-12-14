@@ -20,7 +20,7 @@ class Rtf
 	// записаны те ключевые слова для текущего состояния стека, которые показывают,
 	// что перед нами что-то другое, а не текст - например, то могут быть описания
 	// шрифтов или цветовой палитры. И так далее.
-	function rtf_isPlainText($s)
+	public static function rtf_isPlainText($s)
 	{
 		$failAt = ["*", "fonttbl", "colortbl", "datastore", "themedata", "stylesheet", "info", "picw", "pich"];
 		for ($i = 0; $i < count($failAt); $i++) {
@@ -32,7 +32,7 @@ class Rtf
 	}
 
 	# Mac Roman charset for czech layout
-	function from_macRoman($c)
+	public static function from_macRoman($c)
 	{
 		$table = [
 			0x83 => 0x00c9,
@@ -54,7 +54,7 @@ class Rtf
 		return $c;
 	}
 
-	function rtf2text($filename)
+	public static function rtf2text($filename)
 	{
 		// Пытаемся прочить данные из переданного нам rtf-файла, в случае успеха -
 		// продолжаем наше злобненькое дело.
