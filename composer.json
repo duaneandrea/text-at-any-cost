@@ -1,8 +1,8 @@
 {
-    "name": "brutto/TextAtAnyCost",
+    "name": "merzdan/text-at-any-cost",
     "type": "library",
     "description": "Get text from different documents",
-    "homepage": "https://github.com/rembish/TextAtAnyCost",
+    "homepage": "https://github.com/merzdan/text-at-any-cost",
     "require": {
         "php": ">=5.6"
     },
