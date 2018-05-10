@@ -3,6 +3,7 @@
     "type": "library",
     "description": "Get text from different documents",
     "homepage": "https://github.com/merzdan/text-at-any-cost",
+    "license": "MIT",
     "require": {
         "php": ">=5.6"
     },
